@@ -1,0 +1,16 @@
+<script>
+async function countView() {
+  const res = await fetch("https://yourdomain.com/api/view", {
+    method: "POST"
+  });
+
+  const data = await res.json();
+  document.getElementById("viewCount").innerText = data.views;
+}
+
+countView();
+</script>
+
+<div>
+  Lượt truy cập: <span id="viewCount">0</span>
+</div>
